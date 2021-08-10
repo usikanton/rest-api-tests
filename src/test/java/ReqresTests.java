@@ -44,10 +44,10 @@ public class ReqresTests {
 
     String response = given().
         baseUri(BASE_URI).
-        when().
+    when().
         body(user).
-        post("api/users").
-        then().
+        post("api/users").                     
+    then().
         log().all().
         statusCode(201).
         extract().asString();
